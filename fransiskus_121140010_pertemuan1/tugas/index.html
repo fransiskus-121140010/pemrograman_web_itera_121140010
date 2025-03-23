@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List & Kalkulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="p-6 bg-gray-100">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded shadow-md">
+        <!-- To-Do List -->
+        <h1 class="text-xl font-semibold mb-3">To-Do List</h1>
+        <div class="flex gap-2 mb-3">
+            <input type="text" id="taskInput" placeholder="Tambahkan tugas..." class="flex-1 border p-2 rounded">
+            <button onclick="addTask()" class="bg-blue-500 text-white px-3 py-1 rounded">Tambah</button>
+        </div>
+        <ul id="taskList" class="list-disc pl-5"></ul>
+
+        <!-- Kalkulator -->
+        <div class="mt-6">
+            <h3 class="font-semibold mb-2">Kalkulator Sederhana</h3>
+            <div class="flex gap-2 mb-3">
+                <input type="number" id="angka1" placeholder="Angka 1" class="border p-2 rounded flex-1">
+                <input type="number" id="angka2" placeholder="Angka 2" class="border p-2 rounded flex-1">
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+                <button class="btn-op" data-op="tambah">+</button>
+                <button class="btn-op" data-op="kurang">-</button>
+                <button class="btn-op" data-op="kali">×</button>
+                <button class="btn-op" data-op="bagi">÷</button>
+                <button class="btn-op" data-op="pangkat">xʸ</button>
+                <button class="btn-op" data-op="akar">√x</button>
+                <button class="btn-op" data-op="modulus">%</button>
+            </div>
+            <div id="hasil-kalkulator" class="mt-3 font-semibold"></div>
+        </div>
+
+        <!-- Form Validasi -->
+        <div class="mt-6">
+            <h3 class="font-semibold mb-2">Validasi Form</h3>
+            <input type="text" id="name" placeholder="Nama" class="border p-2 rounded w-full mb-2">
+            <input type="email" id="email" placeholder="Email" class="border p-2 rounded w-full mb-2">
+            <input type="password" id="password" placeholder="Password" class="border p-2 rounded w-full mb-2">
+            <button onclick="validateForm()" class="bg-green-500 text-white px-4 py-1 rounded w-full">Submit</button>
+            <p id="formMessage" class="text-red-500 mt-2"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
